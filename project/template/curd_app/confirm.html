@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>Title</title>
+{% endblock %}
+{% block content %}
+        <h2>  Do you want to Delete This record</h2>
+        <form method="post">
+            {% csrf_token %}
+            <button> Yes </button>
+            <a href="{% url 'show_url' %}">
+                <button type="button"> No </button>
+            </a>
+        </form>
+{% endblock %}
